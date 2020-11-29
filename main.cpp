@@ -2,6 +2,7 @@
 #include <string>
 #include <regex>
 #include "utils.cpp"
+#include "readFile.cpp"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ using namespace std;
 
 int main()
 {
+/*
     if(isValidAdress("http://ens.casali.me/")){
 
         cout << "le lien est valide " << endl;
@@ -18,9 +20,12 @@ int main()
     else{
         cout << "et bah nan" << endl;
     }
+*/
+    CurlLink("http://ens.casali.me/");
+    ReadPage();
+
+
 }
-
-
 
 
 
