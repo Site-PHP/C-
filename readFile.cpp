@@ -9,6 +9,7 @@ using namespace std;
 
 void ReadPage(){
     ifstream monFlux("currentPage.txt");  //Ouverture d'un fichier en lecture
+    ofstream linksFlux("listLink.txt");
 
     if(monFlux)
     {
@@ -34,7 +35,7 @@ void ReadPage(){
                         sous_ligne =sous_ligne.substr(a);
                         b = sous_ligne.find("\"");
                         string lien =sous_ligne.substr(0,b);
-                        cout << lien << endl;
+                        linksFlux << lien << endl;
                         sous_ligne = sous_ligne.substr(b+1);
                         a = -1;
                         a = sous_ligne.find("href=\"");
@@ -47,11 +48,10 @@ void ReadPage(){
                     while (c != -1){
                         c = c+6;
                         sous_ligne2 =sous_ligne2.substr(c);
-                        d = sous_ligne2.find("'");
+                        d = sous_ligne2.find("\'");
                         string lien =sous_ligne2.substr(0,d);
-                        cout << lien << endl;
+                        linksFlux << lien << endl;
                         sous_ligne2 = sous_ligne2.substr(d+1);
-
                         c = -1;
                         c = sous_ligne2.find("href=\'");
                 }
