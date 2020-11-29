@@ -14,10 +14,10 @@ void CurlLink(const string & Link){
 bool isValidAdress(const string& link){
     regex linkBegin {"^http"}; // Verification que le lien comence bien par un http au moins
     vector<regex> endExtension(4); //M Tableau contenant les extensions a ne pas avoir
-    endExtension[0] = {".jpg$"};
-    endExtension[1] = {".png$"};
-    endExtension[2] = {".gif$"};
-    endExtension[3] = {".jpeg$"};
+    endExtension[0] = ".jpg$";
+    endExtension[1] = ".png$";
+    endExtension[2] = ".gif$";
+    endExtension[3] = ".jpeg$";
 
     cout << "check http" << endl;
     if(!regex_search(link, linkBegin))
