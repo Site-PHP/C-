@@ -7,7 +7,7 @@ using namespace std;
 
 void CurlLink(const string & Link){
 
-    string fPath = "curl -L " + Link + " 2> err.txt > /home/samy/ProjetCpp/currentPage.txt";
+    string fPath = "curl -L " + Link + " 2> err.txt > currentPage.txt";
     system(fPath.c_str());
 }
 
