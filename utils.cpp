@@ -37,4 +37,3 @@ bool isFromMainSite(const string& link, const string& mainPath){
 
     return regex_search(link, regex(mainPath));
 }
-
